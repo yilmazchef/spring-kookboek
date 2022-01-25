@@ -780,7 +780,7 @@ scoop install sudo git curl wget corretto11-jdk maven IntelliJ-IDEA-Ultimate-por
 
 ```
 
-Het artikelmodel bestaat uit een titel, publicatiedatum die de DD/MM/JJJJ-indeling gebruikt (DD-dag, MM-maand, JJJJ-jaar) en een reeks auteurs. Elke auteur heeft de voornaam en de tweede naam. Aan het einde hebben we een inhoudelijk element. XML kan op deze manier worden gemodelleerd:
+Het artikelmodel bestaat uit een titel, publicatiedatum die de DD/MM/JJJJ-indeling gebruikt (DD-dag, MM-maand, JJJJ-jaar) en een reeks auteurs. Elke auteur heeft de voornaam en de familienaam naam. Aan het einde hebben we een inhoudelijk element. XML kan op deze manier worden gemodelleerd:
 
 ```xml
 
@@ -959,7 +959,7 @@ public class MainView implements CommandLineRunner {
 		Article article = new Article()
 				.setTitle( "The art of parsing." )
 				.setPublicationDate( new Date() )
-				.setAuthors( List.of( new Author( "Justin", "Bieber" ), new Author( "Nikola", "Tesla" ) ) )
+				.setAuthors( List.of( new Author( "John", "Doe" ), new Author( "Mary", "Boe" ) ) )
 				.setContent( "Interesting story." );
 
 		String xmlArticle = ArticleParser.serialize( article, Format.XML );
@@ -986,11 +986,11 @@ Laten we de uitvoer voor beide formaten controleren.
   "authors": [
     {
       "firstName": "John",
-      "lastName": "Smith"
+      "lastName": "Doe"
     },
     {
-      "firstName": "Betty",
-      "lastName": "Kowalski"
+      "firstName": "Mary",
+      "lastName": "Boe"
     }
   ]
 }
@@ -1005,11 +1005,11 @@ Laten we de uitvoer voor beide formaten controleren.
 	<author>
 		<author>
 			<firstName>John</firstName>
-			<lastName>Smith</lastName>
+			<lastName>Doe</lastName>
 		</author>
 		<author>
-			<firstName>Betty</firstName>
-			<lastName>Kowalski</lastName>
+			<firstName>Mary</firstName>
+			<lastName>Boe</lastName>
 		</author>
 	</author>
 	<content>Interesting story.</content>
@@ -1046,8 +1046,7 @@ public class Article {
 ```
 
 In de eerste regel hebben we de annotatie JacksonXmlRootElement(localName = "article")toegevoegd. Het lost het probleem op met het element artikel met hoofdletters.
-
-In regel 11 en 12 hebben we het probleem opgelost met de verzameling auteurs. Om het wrapping element van de collectie te hernoemen werd JacksonXmlElementWrapper annotatie gebruikt en ingesteld op "auteurs". Daarnaast stellen we de waarde localName van de JacksonXmlProperty-annotatie in op "author". Als gevolg hiervan krijgen we de volgende XML, die aan onze eisen voldoet:
+In regel bouwen hebben we het probleem opgelost met de verzameling auteurs. Om het wrapping element van de collectie te hernoemen werd JacksonXmlElementWrapper annotatie gebruikt en ingesteld op "auteurs". Daarnaast stellen we de waarde localName van de JacksonXmlProperty-annotatie in op "author". Als gevolg hiervan krijgen we de volgende XML, die aan onze eisen voldoet:
 
 
 ```xml
@@ -1059,11 +1058,11 @@ In regel 11 en 12 hebben we het probleem opgelost met de verzameling auteurs. Om
 	<authors>
 		<author>
 			<firstName>John</firstName>
-			<lastName>Smith</lastName>
+			<lastName>Doe</lastName>
 		</author>
 		<author>
-			<firstName>Betty</firstName>
-			<lastName>Kowalski</lastName>
+			<firstName>Mary</firstName>
+			<lastName>Boe</lastName>
 		</author>
 	</authors>
 </article>
