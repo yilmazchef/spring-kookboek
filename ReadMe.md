@@ -1,6 +1,6 @@
 # Java EE kookboek van **Ch€f** - IoC, DI, XML, JSON, YAML, Spring
 
-
+---
 
 [TOC]
 
@@ -10,7 +10,7 @@
 
 ### Wat staat dependency injection voor?
 
-Het is moeilijk om afhankelijkheidsinjectie in enkele zinnen te begrijpen, dus het is beter om te beginnen met een 
+Het is moeilijk om afhankelijkheidsinjectie in enkele zinnen te begrijpen, dus het is beter om te beginnen met een
 codevoorbeeld.
 
 ### Dependency + Injection = ?
@@ -203,13 +203,13 @@ Hieronder kunnen we hetzelfde data met verschillende typen terugvinden:
 
 ### XML: e**X**tensible **M**arkup **L**anguage
 
-XML is used in many aspects of web development. It is often used to separate data from presentation.
+XML wordt gebruikt in vele aspecten van webontwikkeling. Het wordt vaak gebruikt om gegevens van presentatie te scheiden.
 
-- XML Separates Data from Presentation: XML does not carry any information about how to be displayed. The same XML data can be used in many different presentation scenarios. Because of this, with XML, there is a full separation between data and presentation.
+- XML wordt gebruikt in vele aspecten van webontwikkeling. Het wordt vaak gebruikt om gegevens van presentatie te scheiden.- XML scheidt gegevens van presentatie: XML bevat geen informatie over hoe deze moet worden weergegeven. Dezelfde XML-gegevens kunnen in veel verschillende presentatiescenario's worden gebruikt. Hierdoor is er met XML een volledige scheiding tussen data en presentatie.
 
-- XML is Often a Complement to HTML: In many HTML applications, XML is used to store or transport data, while HTML is used to format and display the same data.
+- XML is vaak een aanvulling op HTML: in veel HTML-toepassingen wordt XML gebruikt om gegevens op te slaan of te transporteren, terwijl HTML wordt gebruikt om dezelfde gegevens op te maken en weer te geven.
 
-- XML Separates Data from HTML: When displaying data in HTML, you should not have to edit the HTML file when the data changes. With XML, the data can be stored in separate XML files. With a few lines of JavaScript code, you can read an XML file and update the data content of any HTML page.
+- XML scheidt gegevens van HTML: Wanneer u gegevens in HTML weergeeft, hoeft u het HTML-bestand niet te bewerken wanneer de gegevens veranderen. Met XML kunnen de gegevens worden opgeslagen in afzonderlijke XML-bestanden. Met een paar regels JavaScript-code kunt u een XML-bestand lezen en de gegevensinhoud van elke HTML-pagina bijwerken.
 
 #### Voorbeelden: Books.xml
 
@@ -255,30 +255,28 @@ XML is used in many aspects of web development. It is often used to separate dat
 
 ```
 
-You will learn a lot more about using XML and JavaScript in the DOM section of this tutorial.
-
+U leert veel meer over het gebruik van XML en JavaScript in de DOM van deze zelfstudie.
 
 #### XML Transaction Data
 
-Thousands of XML formats exist, in many different industries, to describe day-to-day data transactions:
+Er bestaan duizenden XML-indelingen, in veel verschillende industrieën, om dagelijkse gegevenstransacties te beschrijven:
 
--   Stocks and Shares
--   Financial transactions
--   Medical data
--   Mathematical data
--   Scientific measurements
--   News information
--   Weather services
+- Stocks en Aandelen
+- Financiële transacties
+- Medische gegevens
+- Wiskundige gegevens
+- Wetenschappelijke metingen
+- Nieuws informatie
+- Weerdiensten
 
-___
 
 #### Voorbeelden: XML Nieuws
 
 **XMLNews is a specification for exchanging news and other information.**
 
-Using a standard makes it easier for both news producers and news consumers to produce, receive, and archive any kind of news information across different hardware, software, and programming languages.
+Het gebruik van een standaard maakt het voor zowel nieuwsproducenten als nieuwsconsumenten gemakkelijker om elke vorm van nieuwsinformatie te produceren, ontvangen en archiveren in verschillende hardware-, software- en programmeertalen.
 
-An example XMLNews document:
+Een voorbeeld  XMLNews document:
 
 ```xml
 
@@ -306,7 +304,7 @@ An example XMLNews document:
 
 #### Voorbeelden: XML Weather Service
 
-An XML national weather service from NOAA (National Oceanic and Atmospheric Administration):
+Een XML nationale weerdienst van NOAA (National Oceanic and Atmospheric Administration):
 
 ```xml
 
@@ -356,113 +354,112 @@ An XML national weather service from NOAA (National Oceanic and Atmospheric Admi
 
 ### JSON:  **J**ava**S**cript **O**bject **N**otation
 
-JSON is a **text format** for storing and transporting data
+JSON is een **tekstformaat** voor het opslaan en transporteren van gegevens
 
-JSON is "self-describing" and easy to understand
+JSON is "zelfbeschrijvend" en gemakkelijk te begrijpen
 
 #### Voorbeelden: Javascript program
 
-This example is a JSON string:
+Dit voorbeeld is een JSON-data:
 
 '{"name":"John", "age":30, "car":null}'
 
-It defines an object with 3 properties:
+Het definieert een object met 3 eigenschappen:
 
 -   name
 -   age
 -   car
 
-Each property has a value.
+Elke property heeft een waarde.
 
-If you parse the JSON string with a JavaScript program, you can access the data as an object:
+Als u de JSON-data parseert met een JavaScript-programma, hebt u toegang tot de gegevens als een object:
 
 let personName = obj.name;  
 let personAge = obj.age;
 
 
-#### What is JSON?
+#### Wat is JSON?
 
-- JSON is a lightweight data-interchange format
-- JSON is plain text written in JavaScript object notation
-- JSON is used to send data between computers
-- JSON is language independent
+- JSON is een lichtgewicht data-uitwisseling formaat
+- JSON is platte tekst geschreven in JavaScript-objectnotatie
+- JSON wordt gebruikt om gegevens tussen computers te verzenden
+- JSON is taalonafhankelijk
 
+De JSON-syntaxis is afgeleid van JavaScript-objectnotatie, maar de JSON-indeling is alleen tekst. Code voor het lezen en genereren van JSON bestaat in veel programmeertalen.
 
-The JSON syntax is derived from JavaScript object notation, but the JSON format is text only. Code for reading and generating JSON exists in many programming languages. The JSON format was originally specified by [Douglas Crockford](http://www.crockford.com/).
+#### Waarom wordt  JSON gebruikt?
 
+De JSON-indeling is syntactisch vergelijkbaar met de code voor het maken van JavaScript-objecten. Hierdoor kan een JavaScript-programma eenvoudig JSON-gegevens converteren naar JavaScript-objecten.
 
-#### Why Use JSON?
+Omdat de indeling alleen tekst is, kunnen JSON-gegevens eenvoudig tussen computers worden verzonden en door elke programmeertaal worden gebruikt.
 
-The JSON format is syntactically similar to the code for creating JavaScript objects. Because of this, a JavaScript program can easily convert JSON data into JavaScript objects.
-
-Since the format is text only, JSON data can easily be sent between computers, and used by any programming language.
-
-JavaScript has a built in function for converting JSON strings into JavaScript objects:
+JavaScript heeft een ingebouwde functie voor het converteren van JSON-tekenreeksen naar JavaScript-objecten:
 
 `JSON.parse()`
 
-JavaScript also has a built in function for converting an object into a JSON string:
+JavaScript heeft ook een ingebouwde functie voor het converteren van een object naar een JSON-tekenreeks:
 
 `JSON.stringify()`
 
-You can receive pure text from a server and use it as a JavaScript object.
+U kunt pure tekst van een server ontvangen en deze als JavaScript-object gebruiken.
 
-You can send a JavaScript object to a server in pure text format.
+U kunt een JavaScript-object naar een server verzenden in pure tekstindeling.
 
-You can work with data as JavaScript objects, with no complicated parsing and translations.
+U kunt met gegevens werken als JavaScript-objecten, zonder ingewikkelde parsering en vertalingen.
 
-#### Storing JSON Data
 
-When storing data, the data has to be a certain format, and regardless of where you choose to store it, _text_ is always one of the legal formats.
+#### Bewaren van JSON Data
 
-JSON makes it possible to store JavaScript objects as text.
+Bij het opslaan van gegevens moeten de gegevens een bepaald formaat hebben en ongeacht waar u ervoor kiest om ze op te slaan, is _text_ altijd een van de wettelijke formaten.
+
+JSON maakt het mogelijk om JavaScript-objecten als tekst op te slaan.
 
 ### YAML
 
-#### What is YAML?
+#### Wat is YAML?
 
-YAML is a data serialization language for storing information in a human-readable form. It originally stood for “Yet Another Markup Language” but has since been changed to “YAML Ain’t Markup Language” to distinguish itself as different from a true markup language.
+YAML is een data serialisatietaal voor het opslaan van informatie in een door mensen leesbare vorm. Het stond oorspronkelijk voor "Yet Another Markup Language" maar is sindsdien veranderd in "YAML Ain't Markup Language" om zich te onderscheiden als anders dan een echte markup-taal.
 
-It is similar to XML and JSON files but uses a more minimalist syntax even while maintaining similar capabilities. YAML is commonly used to create configuration files in Infrastructure as Code (IoC) programs or to manage containers in the DevOps development pipeline.
+Het is vergelijkbaar met XML- en JSON-bestanden, maar gebruikt een meer minimalistische syntaxis, zelfs met behoud van vergelijkbare mogelijkheden. YAML wordt vaak gebruikt om configuratiebestanden te maken in IoC-programma's (Infrastructure as Code) of om containers in de DevOps-ontwikkelingspijplijn te beheren.
 
-More recently, YAML has been used to create automation protocols that can execute a series of commands listed in a YAML file. This means your systems can be more independent and responsive without additional developer attention.
+Meer recent is YAML gebruikt om automatiseringsprotocollen te maken die een reeks opdrachten kunnen uitvoeren die in een YAML-bestand worden vermeld. Dit betekent dat uw systemen onafhankelijker en responsiever kunnen zijn zonder extra aandacht van ontwikkelaars.
 
-As more and more companies embrace DevOps and virtualization, YAML is quickly becoming a must-have skill for modern developer positions. YAML is also easy to incorporate with existing technologies through the support of popular technologies like Python using PyYAML library, Docker, or Ansible.
+Naarmate meer en meer bedrijven DevOps en virtualisatie omarmen, wordt YAML snel een must-have vaardigheid voor moderne ontwikkelaarsposities. YAML is ook gemakkelijk te integreren met bestaande technologieën door de ondersteuning van populaire technologieën zoals Python met behulp van PyYAML-bibliotheek, Docker of Ansible.
 
 
 #### YAML vs JSON vs XML
 
 - YAML (.yml):
-  -- Human-readable code
-  -- Minimalist syntax
-  -- Solely designed for data
-  -- Similar inline style to JSON (is a superset of JSON)
-  -- Allows comments
-  -- Strings without quotation marks
-  -- Considered the “cleaner” JSON
-  -- Advanced features (extensible data types, relational anchors, and mapping types preserving key order)
-  -- Use Case: YAML is best for data-heavy apps that use DevOps pipelines or VMs. It’s also helpful for when other developers on your team will work with this data often and therefore need it to be more readable.
+  -- Door mensen leesbare code
+  -- Minimalistische syntaxis
+  -- Uitsluitend ontworpen voor gegevens
+  - Vergelijkbaar inline stijl met JSON (is een superset van JSON)
+    -- Staat opmerkingen toe
+    -- Tekenreeksen zonder aanhalingstekens
+    -- Beschouwd als de "schonere" JSON
+    -- Geavanceerde functies (uitbreidbare gegevenstypen, relationele ankers en toewijzingstypen met behoud van sleutelvolgorde)
+    -- Use Case: YAML is het beste voor data-zware apps die DevOps-pijplijnen of VM's gebruiken. Het is ook handig voor wanneer andere ontwikkelaars in uw team vaak met deze gegevens werken en daarom meer leesbaar moeten zijn.
 
 - JSON
-  -- Harder to read
-  -- Explicit, strict syntax requirements
-  -- Similar inline style to YAML (some YAML parsers can read JSON files)
-  -- No comments
-  -- Strings require double quotes
-  -- Use Case: JSON is favored in web development as it’s best for serialization formats and transmitting data over HTTP connections.
+  -- Moeilijker te lezen
+  -- Expliciete, strenge syntaxisvereisten
+  - Vergelijkbare inline stijl als YAML (sommige YAML-parsers kunnen JSON-bestanden lezen)
+    -- Geen reacties
+    -- Strings vereisen dubbele aanhalingstekens
+  - Use Case: JSON heeft de voorkeur in webontwikkeling omdat het het beste is voor serialisatieformaten en het verzenden van gegevens via HTTP-verbindingen.
 
 - XML
-  -- Harder to read
-  -- More verbose
-  -- Acts as a markup language, while YAML is for data formatting
-  -- Contains more features than YAML, like tag attributes
-  -- More rigidly defined document schema
-  -- Use Case: XML is best for complex projects that require fine control over validation, schema, and namespace. XML is not human-readable and requires more bandwidth and storage capacity, but offers unparalleled control.
+  -- Moeilijker te lezen
+  -- Meer uitgebreid
+  - Fungeert als een opmaaktaal, terwijl YAML voor gegevensopmaak is
+    -- Bevat meer functies dan YAML, zoals tag attributen
+    -- Meer rigide gedefinieerd documentschema
+    -- Use Case: XML is het beste voor complexe projecten die nauwkeurige controle over validatie, schema en naamruimte vereisen. XML is niet leesbaar voor mensen en vereist meer bandbreedte en opslagcapaciteit, maar biedt ongeëvenaarde controle.
 
 
-#### Features YAML offers
+#### Eigenschappen van YAML
 
-- **Multi-document support**: You can have multiple YAML documents in a single YAML file to make file organization or data parsing easier.The separation between each document is marked by three dashes (---)
+- **Ondersteuning voor meerdere documenten**: U kunt meerdere YAML-documenten in één YAML-bestand hebben om het instellen of parseren van bestanden eenvoudiger te maken. De scheiding tussen elk document wordt gemarkeerd door drie streepjes (---)
 
 ```yaml
 
@@ -476,7 +473,7 @@ action: attack (hit)
 
 ```
 
-- **Built-in commenting**:YAML allows you to add comments to files using the hash symbol (#) similar to Python comments.
+- **Ingebouwde opmerkingen**:MET YAML kunt u opmerkingen toevoegen aan bestanden met behulp van het hash-symbool (#), vergelijkbaar met Python-opmerkingen.
 
 ```yaml
 
@@ -488,9 +485,9 @@ key: #Here is a single-line comment
 
 ```
 
-- **Readable syntax**: YAML files use an indentation system similar to Python to show the structure of your program. You’re required to use spaces to create indentation rather than tabs to avoid confusion. It also cuts much of the “noise” formatting found in JSON and XML files such as quotation marks, brackets, and braces. Together, these formatting specifications increase the readability of YAML files beyond XML and JSON.
+- **Leesbare syntaxis**: YAML-bestanden gebruiken een inspringingssysteem vergelijkbaar met Python om de structuur van uw programma weer te geven. U moet spaties gebruiken om inspringingen te maken in plaats van tabbladen om verwarring te voorkomen. Het snijdt ook veel van de "ruis" -opmaak in JSON- en XML-bestanden, zoals aanhalingstekens, haakjes en accolades. Samen verhogen deze opmaakspecificaties de leesbaarheid van YAML-bestanden die verder gaan dan XML en JSON.
 
-YAML Example
+Een voorbeeld van YAML-data:
 
 ```yaml
 
@@ -503,7 +500,7 @@ Imaro:
 
 ```
 
-JSON Example
+Een voorbeeld JSON-data
 
 ```json
 
@@ -519,10 +516,10 @@ JSON Example
 
 ```
 
-Notice that the same information is conveyed; however, the removal of double quotes, commas, and brackets throughout the YAML file makes it much easier to read at a glance.
+Merk op dat dezelfde informatie wordt overgebracht; Het verwijderen van dubbele aanhalingstekens, komma's en haakjes in het YAML-bestand maakt het echter veel gemakkelijker om in één oogopslag te lezen.
 
 
-- **Implicit and Explicit typing**: YAML offers versatility in typing by auto-detecting data types while also supporting explicit typing options. To tag data as a certain type, simply include !![typeName] before the value.
+- ** Impliciet en expliciet typen **: YAML biedt veelzijdigheid in typen door gegevenstypen automatisch te detecteren, terwijl het ook expliciete typopties ondersteunt. Om gegevens als een bepaald type te taggen, neemt u eenvoudig !! [typeNaam] voor de waarde.
 
 ```yaml
 
@@ -535,7 +532,7 @@ is-a-bool: !!bool true
 
 ```
 
-- **No executable commands**: As a data-representation format, YAML does not contain executables. It’s therefore very safe to exchange YAML files with external parties. YAML must be integrated with other languages, like Perl or Java, to add executables.
+- **Geen uitvoerbare opdrachten**: Als gegevensrepresentatie-indeling bevat YAML geen uitvoerbare bestanden. Het is daarom zeer veilig om YAML-bestanden uit te wisselen met externe partijen. YAML moet worden geïntegreerd met andere talen, zoals Perl of Java, om uitvoerbare bestanden toe te voegen.
 
 
 ## Spring Framework
@@ -548,7 +545,7 @@ Spring is het populairste applicatie-ontwikkelingsraamwerk voor Java EE (Enterpr
 
 Spring is lichtgewicht als het gaat om grootte en transparantie. De basisversie van het Spring-Framework is ongeveer 2 MB. De kernfuncties van het Spring Framework kunnen worden gebruikt bij het ontwikkelen van elke Java-applicatie, maar er zijn uitbreidingen voor het bouwen van webapplicaties bovenop het Java EE-platform. Spring Framework-doelen om J2EE-ontwikkeling gebruiksvriendelijker te maken en goede programmeerpraktijken te bevorderen door een op POJO gebaseerd programmeermodel mogelijk te maken. POJO staat voor plain-java-objects, simpele java objecten worden op elk project gebruikt.
 
-### Applications of Spring
+### Applicaties van het Spring Framework
 
 Hieronder volgt de lijst met enkele van de grote voordelen van het gebruik van Spring Framework −
 
@@ -575,11 +572,11 @@ Hieronder volgt de lijst met enkele van de grote voordelen van het gebruik van S
 
 ### OPDRACHT OBJECT-MAPPEN
 
-In this assignment, you will learn how to do it in Java by using dataformat-xml — Jackson library extension in such a way that you only need to write your code once. 
-We will go through the main features including model definition, serialization, and deserialization. Finally, you 
+In this assignment, you will learn how to do it in Java by using dataformat-xml — Jackson library extension in such a way that you only need to write your code once.
+We will go through the main features including model definition, serialization, and deserialization. Finally, you
 will be assigned to create a yaml object serializer and deserializer yourself.
 
- 
+
 #### Gebruikte technologieën en tools
 
 - [ ] Intellij IDEA
@@ -611,28 +608,26 @@ iwr -useb get.scoop.sh | iex
 Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 ```
 
-**Scoop installeert de tools die je kent en waar je van houdt**. Om alle nodige applicaties automatisch te installeren voer de volgende uit: 
+**Scoop installeert de tools die je kent en waar je van houdt**. Om alle nodige applicaties automatisch te installeren voer de volgende uit:
 
 ```powershell
 scoop install sudo git curl wget corretto11-jdk maven IntelliJ-IDEA-Ultimate-portable
 ```
 
-
-### Ontwikkelingsstappen
+#### Ontwikkelingsstappen
 
 - [ ] Maak een eenvoudig Maven-project -> SpringKookboek
 - [ ] Project Directory Structuur -> Maven
 - [ ] Voeg gerelateerde dependencies naar het project toe.
 - [ ] Voeg jar-afhankelijkheden toe aan pom.xml -> Automatisch of Manueel
 
-
-### Project Directory Structuur
+#### Project Directory Structuur
 
 - [ ] src / main / java: maak de volgende lagen aan: models, repositories, services, views, configs, utils
 - [ ] src / main / resources: voeg de volgende bestanden naar resources toe: data.xml, data.json, data.yml
 - [ ] pom.xml: zorg ervoor dat pom.xml is al gecreëerd worden.
 
-### Voeg jar-afhankelijkheden toe aan pom.xml
+#### Voeg jar-afhankelijkheden toe aan pom.xml
 
 - [ ] Definieer het Parent-project
 
@@ -760,25 +755,386 @@ scoop install sudo git curl wget corretto11-jdk maven IntelliJ-IDEA-Ultimate-por
 
 ```
 
-### How to Parse JSON & XML Using the Same Code in Java
+
+- [ ] Model definitie
+  Laten we een artikelmodel bouwen. JSON-versie van een artikel wordt in de volgende kern gepresenteerd:
+
+
+```json
+
+{
+  "title": "Amazing history of XML.",
+  "publicationDate": "12/04/1575",
+  "authors": [
+    {
+      "firstName": "John",
+      "lastName": "Doe"
+    },
+    {
+      "firstName": "Marry",
+      "lastName": "Boe"
+    }
+  ],
+  "content": "History of XML is not amazing. Fin."
+}
+
+```
+
+Het artikelmodel bestaat uit een titel, publicatiedatum die de DD/MM/JJJJ-indeling gebruikt (DD-dag, MM-maand, JJJJ-jaar) en een reeks auteurs. Elke auteur heeft de voornaam en de tweede naam. Aan het einde hebben we een inhoudelijk element. XML kan op deze manier worden gemodelleerd:
+
+```xml
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<article>
+    <title>Amazing history of XML.</title>
+    <publicationDate>12/04/1575</publicationDate>
+    <authors>
+        <author>
+            <firstName>John</firstName>
+            <lastName>Doe</lastName>
+        </author>
+        <author>
+            <firstName>Marry</firstName>
+            <lastName>Boe</lastName>
+        </author>
+    </authors>
+    <content>History ox XML is not amazing. Fin.</content>
+</article>   
+
+```
+
+Onze Java POJO's(Plain Old Java Object)gebruiken String, java.util.Date en Lijst types:
+
+```java
+
+public class Article {
+   private String title;
+   private Date publicationDate;
+   private List<Author> authors;
+   private String content;
+}
+
+```
+
+```java
+
+public class Author {
+   private String firstName;
+   private String lastName;
+}
+
+```
+
+
+- [ ] Serialisatie
+
+Over het algemeen kunnen we serialisatie begrijpen als een proces van het transformeren van gegevens in bits. Geserialiseerde gegevens kunnen via een netwerk worden overgedragen of opgeslagen en indien nodig opnieuw worden gemaakt. In onze use-case bouwen we een artikelobject en transformeren we het in JSON- en XML-tekenreeksen.
+
+Bekijk het artikel parser en zijn serialisatiemethoden:
+
+```java
+
+public class ArticleParser {
+
+  private static final ObjectMapper XML_MAPPER = new XmlMapper();
+  private static final ObjectMapper JSON_MAPPER = new ObjectMapper();
+
+  static {
+    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/YYYY");
+    XML_MAPPER.setDateFormat(simpleDateFormat);
+    JSON_MAPPER.setDateFormat(simpleDateFormat);
+  }
+
+  public static String serialize(Article article, Format format) {
+    return format.equals(Format.JSON) ? serialize(article, JSON_MAPPER) : serialize(article, XML_MAPPER);
+  }
+
+  private static String serialize(Article article, ObjectMapper objectMapper) {
+    try {
+      return objectMapper.writeValueAsString(article);
+    } catch (IOException e) {
+      throw new UncheckedIOException("Oh no!", e);
+    }
+  }
+}
+
+```
+
+Allereerst, om één code te gebruiken om zowel XML als JSON te serialiseren, hebben we twee ObjectMappersnodig . De eerste is de standaard Jackson's ObjectMapper (JSON_MAPPER in regel 3) voor JSON-formaat en XmlMapper (XML_MAPPER in regel 2) voor XML-formaat. Daarnaast stellen we de datumnotatie van ObjectMappers in op onze behoeften (regels 6-8).
+
+De tweede is een speciale versie van dataformat-xml library. Het werkt op JSON-abstracties onder de motorkap, maar het is in staat om geldige XML's te produceren.
+
+De methode serialiseren in regel 11 neemt een instantie van een artikel dat we willen serialiseren en de indeling die een enumtype is (XML, JSON). Vervolgens wordt de private methode serialize (regel 15) aangeroepen met de juiste ObjectMapper-instantie.
+
+Ten slotte transformeren we het artikel naar een tekenreeks door de methode writeValueAsString in regel 16 aan te roepen.
+
+Om het te laten werken hebben we nog een belangrijk onderdeel nodig. In onze artikel- en auteursmodellen moeten we velden annoteren, zodat Jackson weet hoe hij het in en van een bepaald formaat moet plaatsen. Laten we eens kijken naar de geannoteerde velden van artikel- en auteurklassen:
+
+```java
+
+public class Article {
+  @JsonProperty
+  private String title;
+
+  @JsonProperty
+  private Date publicationDate;
+
+  @JsonProperty
+  private List<Author> authors;
+
+  @JsonProperty
+  @JsonSerialize(using = CustomSerializer.class)
+  private String content;
+}
+
+```
+
+```java
+
+public class Author {
+  @JsonProperty
+  private String firstName;
+
+  @JsonProperty
+  private String lastName;
+}
+
+```
+
+JsonProperty is de meest basale annotatie. Standaard zorgt het ervoor dat Jackson de veldnaam gebruikt zoals deze is. De veldtitel Tekenreeks wordt bijvoorbeeld geserialiseerd als een titelveld in JSON en XML. Als uw veldnaam afwijkt van de veldnamen in de opgegeven indeling, kunt u deze aanpassen door de waarde voor de annotatie te definiëren. Hier is een voorbeeld: JsonProperty(value ="myTitle").
+
+Zoals u kunt zien in regel 8 zal Jackson standaardcontainers behandelen met dezelfde JsonProperty-annotatie. We hoefden alleen maar velden van de klasse Auteur te annoteren. De hele collectie wordt door de bibliotheek geserialiseerd en gedeserialiseerd.
+
+Soms hebben we aangepaste serializers nodig. Om dit te doen kunt u JsonSerialize-annotaties gebruiken die een klassenaam van een serializer nemen als de waarde voor "using" attribuut (regel 12). De aangepaste serialisator kan de klassen JsonSerializer of StdSerializer uitbreiden en de serialisatiemethode implementeren.
+
+Als we de waarde van het inhoudsveld willen inkorten, kunnen we de volgende aangepaste serializer gebruiken:
+
+
+```java
+
+public class CustomSerializer extends JsonSerializer<String> {
+
+  @Override
+  public void serialize(String value, JsonGenerator gen, SerializerProvider serializers) throws IOException {
+      gen.writeString(value.trim());
+  }
+}
+
+
+```
+
+Laten we een artikelobject bouwen en serialiseren naar JSON en XML met behulp van de code die wordt gepresenteerd in ArticleParser:
+
+```java
+
+package be.intec.springkookboek.views;
+
+
+import be.intec.springkookboek.models.Article;
+import be.intec.springkookboek.models.Author;
+import be.intec.springkookboek.models.Format;
+import be.intec.springkookboek.utils.ArticleParser;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import java.util.Date;
+import java.util.List;
+import java.util.logging.Logger;
+
+@SpringBootApplication
+public class MainView implements CommandLineRunner {
+
+	private static final Logger LOG = Logger.getLogger(MainView.class.getName());
+
+	public static void main( String[] args ) {
+
+		SpringApplication.run( MainView.class, args );
+	}
+
+
+	@Override
+	public void run( final String... args ) throws Exception {
+
+		Article article = new Article()
+				.setTitle( "The art of parsing." )
+				.setPublicationDate( new Date() )
+				.setAuthors( List.of( new Author( "Justin", "Bieber" ), new Author( "Nikola", "Tesla" ) ) )
+				.setContent( "Interesting story." );
+
+		String xmlArticle = ArticleParser.serialize( article, Format.XML );
+		String jsonArticle = ArticleParser.serialize( article, Format.JSON );
+
+		LOG.info( xmlArticle );
+		LOG.info( jsonArticle );
+	}
+
+}
 
 
 
+```
+
+Laten we de uitvoer voor beide formaten controleren.
+
+```json
+
+{
+  "title": "The art of parsing.",
+  "publicationDate": "29/09/2020",
+  "content": "Interesting story.",
+  "authors": [
+    {
+      "firstName": "John",
+      "lastName": "Smith"
+    },
+    {
+      "firstName": "Betty",
+      "lastName": "Kowalski"
+    }
+  ]
+}
+
+```
+
+```xml
+
+<Article>
+	<title>The art of parsing.</title>
+	<publicationDate>29/09/2020</publicationDate>
+	<author>
+		<author>
+			<firstName>John</firstName>
+			<lastName>Smith</lastName>
+		</author>
+		<author>
+			<firstName>Betty</firstName>
+			<lastName>Kowalski</lastName>
+		</author>
+	</author>
+	<content>Interesting story.</content>
+</Article>
+
+```
+
+JSON ziet er goed uit, maar XML... Er ging iets mis. Allereerst wordt het hoofdelement "Artikel" genoemd met de hoofdletter en we wilden "artikel". Het tweede probleem is zichtbaar in regel 4. Collection of Authors werd geserialiseerd met het inpakelement "author". Het moeten echter "auteurs" zijn met "auteur" -elementen erin.
+
+Om deze problemen op te lossen, laten we kleine wijzigingen aanbrengen in de artikelklasse:
+
+```java
+
+@JacksonXmlRootElement(localName = "article")
+public class Article {
+
+  @JsonProperty
+  private String title;
+
+  @JsonProperty
+  private Date publicationDate;
+
+  @JsonProperty
+  @JacksonXmlElementWrapper(localName = "authors")
+  @JacksonXmlProperty(localName = "author")
+  private List<Author> authors;
+
+  @JsonProperty
+  @JsonSerialize(using = CustomSerializer.class)
+  private String content;
+}
+
+
+```
+
+In de eerste regel hebben we de annotatie JacksonXmlRootElement(localName = "article")toegevoegd. Het lost het probleem op met het element artikel met hoofdletters.
+
+In regel 11 en 12 hebben we het probleem opgelost met de verzameling auteurs. Om het wrapping element van de collectie te hernoemen werd JacksonXmlElementWrapper annotatie gebruikt en ingesteld op "auteurs". Daarnaast stellen we de waarde localName van de JacksonXmlProperty-annotatie in op "author". Als gevolg hiervan krijgen we de volgende XML, die aan onze eisen voldoet:
+
+
+```xml
+
+<article>
+	<title>The art of parsing.</title>
+	<publicationDate>29/09/2020</publicationDate>
+	<content>Interesting story.</content>
+	<authors>
+		<author>
+			<firstName>John</firstName>
+			<lastName>Smith</lastName>
+		</author>
+		<author>
+			<firstName>Betty</firstName>
+			<lastName>Kowalski</lastName>
+		</author>
+	</authors>
+</article>
+
+
+```
+
+- [ ] Deserialisatie
+
+Laten we nu eens kijken naar de code die artikelen deserializeert. We laden het bestand met JSON- en XML-versies van artikelen en zetten deze om in echte Java-objectinstanties.
+
+```java
+
+ public static Article deserialize(String article, Format format) {
+    return format.equals(Format.JSON) ? deserialize(article, JSON_MAPPER) : deserialize(article, XML_MAPPER);
+  }
+
+  private static Article deserialize(String article, ObjectMapper objectMapper) {
+    try {
+      return objectMapper.readValue(article, Article.class);
+    } catch (JsonProcessingException e) {
+      throw new UncheckedIOException("Bad!", e);
+    }
+  }
+
+
+```
+
+De bovenstaande code is analoog aan de serialisatiecode. We gebruiken dezelfde truc met het leveren van de juiste ObjectMapper voor een bepaald formaat en we houden dezelfde code voor deserialisatie zelf.
+
+In regel 7 gebruiken we de readValue-methode van objectMapper en bieden we het stringbevattende artikel plus article.class als tweede argument. Het resulteert in het artikelobject.
+
+Met alle elementen op hun plaats kunnen we JSON- en XML-bestanden laden en deserialiseren:
+
+```java
+
+String jsonStringArticle = Files.readString(Paths.get("src/main/resources/article.json"));
+Article deserializedJsonArticle = ArticleParser.deserialize(jsonStringArticle, Format.JSON);
+LOG.info(deserializedJsonArticle.toString());
+
+    String xmlStringArticle = Files.readString(Paths.get("src/main/resources/article.xml"));
+    Article deserializedXmlArticle = ArticleParser.deserialize(xmlStringArticle, Format.XML);
+    LOG.info(deserializedXmlArticle.toString());
+
+```
+
+Logboeken laten ons zien of alle artikeleigenschappen correct zijn ingesteld:
+
+- [ ]  Pak het af!
+
+De belangrijkste afhaalmaaltijd uit dit artikel is een oplossing om één code te hebben voor twee veelgebruikte formaten. Dankzij zo'n aanpak hebben we minder code te onderhouden. En dat is meestal maar goed ook.
+
+Ik moedig u aan om een kijkje te nemen in dataformaat-xml-documentatie om meer details te vinden over de functies (met name streaming API die erg handig is bij het omgaan met documenten die niet in het geheugen passen) en de beperkingen ervan.
+
+Je kunt de hele code vinden in het artikel op de Github repository:
+https://github:com/yilmazchef/spring-kookboek
 
 
 
-### Het uitvoeren van de code
+#### Het uitvoeren van de code
 
 - [ ] Voer de volgende terminal-commando uit om je project laten automatisch gebouwd worden: <code> mvn clean install</code>
 - [ ] Om het app te starten voer de volgende commando op terminal uit: <code> mvn spring-boot:run </code>
 
-
-### Aankondigingen
+#### Aankondigingen over de opdracht
 
 - Het type van dit opdracht: Individueel opdracht
 
-Als je klaar bent, uploadeer je de code als zip-bestand naar "**<u>Persoonlijke privé-map</u>**". Vergeet niet dat een juiste naamgevingsconventie volgen essentieel is; bijvoorbeeld: "SpringKookboek Yilmaz Mustafa.zip". 
+Als je klaar bent, uploader je de code als zip-bestand naar "**<u>Persoonlijke privé-map</u>**". Vergeet niet dat een juiste naamgevingsconventie volgen essentieel is; bijvoorbeeld: "SpringKookboek Yilmaz Mustafa.zip".
 Zorgen ervoor dat je het mark-down-bestand (***.md) aan de zip hebt toegevoegd. Geen wachtwoord voor het zip is vereist.
+
 
 
 ### Het bericht van de Ch€f:
